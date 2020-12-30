@@ -18,6 +18,15 @@ df['x_center'] = df['x'] + df['w']/2
 df['y_center'] = df['y'] + df['h']/2
 df['classes'] = 0
 
+# 归一化
+df['x'] = df['x']/1280
+df['y'] = df['y']/720
+df['w'] = df['w']/1280
+df["h"] = df["h"] / 720
+df['x_center'] =  df['x_center'] / 1280
+df['y_center'] = df['y_center']/ 720
+
+
 from tqdm.auto import tqdm
 import shutil as sh
 df = df[['image_id','x', 'y', 'w', 'h','x_center','y_center','classes']]
@@ -40,10 +49,6 @@ if True:
                 os.makedirs('convertor/fold{}/labels/'.format(fold)+path2save)
             with open('convertor/fold{}/labels/'.format(fold)+path2save+name+".txt", 'w+') as f:
                 row = mini[['classes','x_center','y_center','w','h']].astype(float).values
-                row['x_center'] = row['x_center']/1280
-                row['y_center'] = row['y_center']/720
-                row['w'] = row['w']/1280
-                row['h'] = row['h']/720
                 row = row.astype(str)
                 for j in range(len(row)):
                     text = ' '.join(row[j])
