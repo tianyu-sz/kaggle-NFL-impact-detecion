@@ -45,4 +45,4 @@ if True:
                     f.write("\n")
             if not os.path.exists('convertor/fold{}/images/{}'.format(fold,path2save)):
                 os.makedirs('convertor/fold{}/images/{}'.format(fold,path2save))
-            sh.copy((data_root_dir + r"{}/{}.jpg").format(source,name),'convertor/fold{}/images/{}/{}.jpg'.format(fold,path2save,name))
+            sh.copy((data_root_dir + r"{}/{}").format(source,name),'convertor/fold{}/images/{}/{}'.format(fold,path2save,name))
