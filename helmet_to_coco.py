@@ -24,7 +24,7 @@ fold_count = 20     # 5 20
 fold_numbers = [18]     # 0 18
 
 index = list(set(df.image_id))
-source = 'train'
+source = 'images'
 if True:
     for fold in fold_numbers:
         val_index = index[len(index)*fold//fold_count:len(index)*(fold+1)//fold_count]
