@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import os
 
-data_root_dir = r'D:/IdeaProjects/Kaggle/kaggle-NFL-impact-detecion/'
-# data_root_dir = r'/content/data/nfl-impact-detection/'
+# data_root_dir = r'D:/IdeaProjects/Kaggle/kaggle-NFL-impact-detecion/'
+data_root_dir = r'/content/data/nfl-impact-detection/'
 
 df = pd.read_csv(data_root_dir + r'image_labels.csv')
 df['image_id'] = df['image']
