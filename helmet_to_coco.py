@@ -1,12 +1,15 @@
 import numpy as np
 import pandas as pd
 import os
+import platform
 
-# data_root_dir = r'D:/IdeaProjects/Kaggle/kaggle-NFL-impact-detecion/'
-data_root_dir = r'/content/data/nfl-impact-detection/'
+if platform.system() =="Windows":
+    data_root_dir = r'D:/IdeaProjects/Kaggle/kaggle-NFL-impact-detecion/'
+else:
+    data_root_dir = r'/content/data/nfl-impact-detection/'
 
 df = pd.read_csv(data_root_dir + r'image_labels.csv')
-df['image_id'] = df['image']
+df['image_id'] = df['image'].str[:-4]  # 去掉.jpg扩展名
 df['x'] = df['left']
 df['y'] = df['top']
 df['w'] = df["width"]
