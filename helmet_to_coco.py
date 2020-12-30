@@ -40,7 +40,10 @@ if True:
                 os.makedirs('convertor/fold{}/labels/'.format(fold)+path2save)
             with open('convertor/fold{}/labels/'.format(fold)+path2save+name+".txt", 'w+') as f:
                 row = mini[['classes','x_center','y_center','w','h']].astype(float).values
-                row = row/1024
+                row['x_center'] = row['x_center']/1280
+                row['y_center'] = row['y_center']/720
+                row['w'] = row['w']/1280
+                row['h'] = row['h']/720
                 row = row.astype(str)
                 for j in range(len(row)):
                     text = ' '.join(row[j])
