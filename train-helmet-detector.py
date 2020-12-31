@@ -12,7 +12,7 @@ from models.yolo import Model
 from utils import google_utils
 from utils.datasets import *      # 直接用默认的
 from utils.utils import *
-from utils.datasets import *
+from utils.datasets-helmet import *
 
 mixed_precision = True
 try:  # Mixed precision training https://github.com/NVIDIA/apex
