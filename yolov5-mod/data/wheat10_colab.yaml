@@ -1,0 +1,9 @@
+# train and val datasets (image directory or *.txt file with image paths)
+train: /content/convertor/fold10/images/train2017/
+val: /content/convertor/fold10/images/val2017/
+
+# number of classes
+nc: 1
+
+# class names
+names: ['helmet']
