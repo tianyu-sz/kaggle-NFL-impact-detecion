@@ -14,7 +14,7 @@ df['image_id'] = df['image_name'].str[:-4]  # 去掉.jpg .png扩展名
 # x y w h 在原始数据中已经计算完
 df['x_center'] = df['x'] + df['w'] / 2
 df['y_center'] = df['y'] + df['h'] / 2
-df['classes'] = df['impact']  # 1 碰, 2 碰了
+df['classes'] = df['impact'] - 1  # 1 碰, 2 碰了 , 数值-1, 跟yolov5类别号对上,从零开始算
 
 # 归一化
 df['x'] = df['x'] / 1280

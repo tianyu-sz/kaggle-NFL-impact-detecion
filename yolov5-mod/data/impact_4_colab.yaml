@@ -3,7 +3,7 @@ train: /content/convertor/fold4/images/train2017/
 val: /content/convertor/fold4/images/val2017/
 
 # number of classes
-nc: 3
+nc: 2
 
 # class names
-names: ['0','no', 'impact']
+names: ['0','impact']
