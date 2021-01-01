@@ -13,6 +13,8 @@ df = pd.read_csv(data_root_dir + r'video_labels.csv')
 # 只用impact是2碰撞的数据:
 df = df[df['impact'] == 2]
 
+print("单class数据长度:", len(df))
+
 df['image_id'] = df['image_name'].str[:-4]  # 去掉.jpg .png扩展名
 # x y w h 在原始数据中已经计算完
 df['x_center'] = df['x'] + df['w'] / 2
