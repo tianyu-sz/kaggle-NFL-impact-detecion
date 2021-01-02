@@ -6,7 +6,9 @@ import platform
 if platform.system() == "Windows":
     data_root_dir = r'D:/IdeaProjects/Kaggle/kaggle-NFL-impact-detecion/'
 else:
-    data_root_dir = r'/content/data/nfl-video-to-image/'  # 设定目录
+    # data_root_dir = r'/content/data/nfl-video-to-image/'  # 设定colab目录
+    data_root_dir = r'/kaggle/working/'  # 设定kaggle目录
+
 
 df = pd.read_csv(data_root_dir + r'video_labels.csv')
 
