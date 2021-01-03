@@ -10,9 +10,9 @@ from torch.utils.tensorboard import SummaryWriter
 import test  # import test.py to get mAP after each epoch
 from models.yolo import Model
 from utils import google_utils
-from utils.datasets import *      # 直接用默认的
+# from utils.datasets import *      # 直接用默认的
 from utils.utils import *
-# from utils.datasets_helmet import *
+from utils.datasets_impact import *
 
 mixed_precision = True
 try:  # Mixed precision training https://github.com/NVIDIA/apex
